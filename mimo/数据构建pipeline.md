@@ -69,7 +69,12 @@ MiMo 主报告描述的总体顺序是：面向 agent 的 mid-training、短阶�
 
 下图是对公开机制的综合表达，不是官方组件图。任务来源和评分分支因领域而异。
 
-```mermaid
+![MiMo 后训练数据构建整体流程：任务构建、验证、在线训练闭环及 SFT／MOPD 分支](assets/data-construction-pipeline.svg)
+
+<details>
+<summary>查看流程图的 Mermaid 源码</summary>
+
+```text
 flowchart TD
     A["原始来源：仓库、PR、需求、文件、业务场景"] --> B["任务候选与需求说明"]
     B --> C["起始环境、依赖、工具与状态"]
@@ -92,6 +97,8 @@ flowchart TD
     P --> Q["修正示范或专项教师"]
     Q --> R["SFT / MOPD 数据分支"]
 ```
+
+</details>
 
 ### 2.3 至少区分五种数据记录
 
